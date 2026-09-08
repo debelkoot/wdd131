@@ -1,0 +1,170 @@
+/* Core Styling & Typography */
+:root {
+    --primary-color: #1b4965;
+    --secondary-color: #2b2d42;
+    --nav-bg: #2b2d42;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --light-bg: #f4f4f9;
+    --accent-color: #ffb703;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header & Title */
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+}
+
+#course-title {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1.2rem 0;
+}
+
+/* Flexbox Navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--nav-bg);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    flex-grow: 1;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #3d405b;
+    color: var(--accent-color);
+}
+
+/* Main Content Layout */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+main h1 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Grid Layout for Cards */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+
+/* Card Styling */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    margin: 0;
+    padding: 0.8rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.card h3 {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.card-content {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: flex-start;
+}
+
+.flex-row {
+    align-items: center;
+}
+
+.profile-img {
+    width: 120px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.flag-img {
+    width: 130px;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* Resources List */
+.card ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.card li {
+    margin-bottom: 0.5rem;
+}
+
+.card a {
+    color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+#lastModified {
+    color: #ffd166;
+    font-size: 0.9rem;
+}
