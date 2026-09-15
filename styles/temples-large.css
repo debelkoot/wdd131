@@ -1,0 +1,23 @@
+@media (min-width: 640px) {
+    #menu {
+        display: none; /* Hide hamburger button on large screens */
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    nav.navigation {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    /* Grid Layout for Temple Images */
+    .res-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
