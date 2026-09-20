@@ -1,1 +1,124 @@
+/* Global Variables - Oromia Regional Color Scheme */
+:root {
+    --primary-color: #008751;   /* Green */
+    --secondary-color: #D21034; /* Red */
+    --accent-color: #FFD100;    /* Yellow */
+    --text-color-light: #FFFFFF;
+    --background-color: #F9FAFB;
+    --card-background: #FFFFFF;
+    --text-color: #1F2937;
+    --border-color: #E5E7EB;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 1.25rem;
+    border-bottom: 4px solid var(--accent-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+.weather-icon-mobile {
+    display: inline-block;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 1.25rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    border-top: 4px solid var(--accent-color);
+}
+
+/* Wider View Layout */
+@media (min-width: 650px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "hero hero"
+            "data weather";
+    }
+
+    .hero {
+        grid-area: hero;
+    }
+
+    .data-card {
+        grid-area: data;
+    }
+
+    .weather-card {
+        grid-area: weather;
+    }
+
+    /* Hide mobile SVG in wide view */
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    /* Requirement 6: Pseudo-Element Emoticon in wide view */
+    .weather-heading::after {
+        content: " ⛅";
+        font-size: 1.2rem;
+    }
+}
