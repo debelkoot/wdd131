@@ -114,3 +114,24 @@ footer {
     margin-top: 2rem;
     font-size: 0.9rem;
 }
+
+/* Media Query Rules for Mobile Viewports */
+@media screen and (max-width: 600px) {
+    main {
+        margin: 1rem;
+        padding: 1.25rem;
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .submit-btn {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+}
