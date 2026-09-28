@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="Product Review Form for WDD 131 coursework assignment.">
+    <meta name="author" content="Debela Mendara Refisa">
+    <link rel="stylesheet" href="form.css">
+    <script src="form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
 
+    <main>
+        <form method="get" action="review.html">
+            <!-- Product Name Selection -->
+            <div class="form-item">
+                <label for="product-name">Product Name <span class="required">*</span></label>
+                <select id="product-name" name="product-name" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>
+            </div>
+
+            <!-- Overall Rating -->
+            <fieldset class="form-item">
+                <legend>Overall Rating <span class="required">*</span></legend>
+                <div class="rating-group">
+                    <label for="star1">
+                        <input type="radio" id="star1" name="rating" value="1" required> ☆ 1
+                    </label>
+                    <label for="star2">
+                        <input type="radio" id="star2" name="rating" value="2" required> ☆☆ 2
+                    </label>
+                    <label for="star3">
+                        <input type="radio" id="star3" name="rating" value="3" required> ☆☆☆ 3
+                    </label>
+                    <label for="star4">
+                        <input type="radio" id="star4" name="rating" value="4" required> ☆☆☆☆ 4
+                    </label>
+                    <label for="star5">
+                        <input type="radio" id="star5" name="rating" value="5" required> ☆☆☆☆☆ 5
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Date of Installation -->
+            <div class="form-item">
+                <label for="install-date">Date of Installation <span class="required">*</span></label>
+                <input type="date" id="install-date" name="install-date" required>
+            </div>
+
+            <!-- Useful Features (Checkboxes) -->
+            <fieldset class="form-item">
+                <legend>Which features did you find useful in the product? <em>(Check all that apply)</em></legend>
+                <div class="checkbox-group">
+                    <label for="feat-durability">
+                        <input type="checkbox" id="feat-durability" name="features" value="durability"> Durability
+                    </label>
+                    <label for="feat-ease">
+                        <input type="checkbox" id="feat-ease" name="features" value="ease-of-use"> Ease of Use
+                    </label>
+                    <label for="feat-performance">
+                        <input type="checkbox" id="feat-performance" name="features" value="performance"> Performance
+                    </label>
+                    <label for="feat-design">
+                        <input type="checkbox" id="feat-design" name="features" value="design"> Design
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Written Review (Optional) -->
+            <div class="form-item">
+                <label for="written-review">Written Review <em>(Optional)</em></label>
+                <textarea id="written-review" name="written-review" rows="4"></textarea>
+            </div>
+
+            <!-- Your Name (Optional) -->
+            <div class="form-item">
+                <label for="user-name">Your Name <em>(Optional)</em></label>
+                <input type="text" id="user-name" name="user-name">
+            </div>
+
+            <!-- Form Submission Button -->
+            <div class="form-item">
+                <input type="submit" value="Post Review" class="submit-btn">
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Debela Mendara Refisa | Ethiopia</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
