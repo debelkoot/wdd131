@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Picture Album | WDD 131</title>
+  <meta name="description" content="A responsive and interactive temple picture album gallery featuring dynamic filtering and native lazy loading.">
+  <meta name="author" content="Debela Mendara Refisa">
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <button id="menu" aria-label="Toggle Navigation Menu"></button>
+    <nav>
+      <ul class="navigation">
+        <li><a href="#" id="home">Home</a></li>
+        <li><a href="#" id="old">Old</a></li>
+        <li><a href="#" id="new">New</a></li>
+        <li><a href="#" id="large">Large</a></li>
+        <li><a href="#" id="small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main>
+    <h2>Home</h2>
+    <div class="res-grid"></div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> | Debela Mendara Refisa | Ethiopia</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
