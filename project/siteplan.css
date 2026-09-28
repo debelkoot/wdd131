@@ -1,1 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom Educational Academy Site Plan</title>
+    <meta name="description" content="Website planning document for Wisdom Educational Academy website project.">
+    <link rel="stylesheet" href="siteplan.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>Wisdom Educational Academy Website Plan</h1>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>1. Site Name</h2>
+            <h3>Wisdom Educational Academy</h3>
+            
+            <img src="https://via.placeholder.com/150x50?text=Logo" alt="Wisdom Educational Academy Logo Concept" class="logo-preview">
+            
+            <p>
+                The logo concept includes an open book, a graduation cap, and a light symbol.
+                These symbols represent knowledge, learning, growth, and a bright future.
+            </p>
+
+            <p>
+                I chose the name "Wisdom Educational Academy" because it represents a school
+                that focuses on knowledge, skills, and values. The name shows the goal of
+                helping students learn and prepare for their future.
+            </p>
+        </section>
+
+
+        <section>
+            <h2>2. Site Purpose</h2>
+
+            <p>
+                The purpose of this website is to provide information about Wisdom Educational
+                Academy. The website will introduce the school, its mission, educational
+                programs, student activities, and contact information. It will help parents,
+                students, and visitors learn more about the school and its services.
+            </p>
+        </section>
+
+
+        <section>
+            <h2>3. Scenarios</h2>
+
+            <ul>
+                <li>
+                    A parent wants to learn about the school's educational programs.
+                    Where can they find information about classes and services?
+                </li>
+
+                <li>
+                    A new visitor wants to contact the school.
+                    Where can they find the school's contact information and location details?
+                </li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h2>4. Color Schema</h2>
+
+            <p>
+                <strong>Dark Blue (#1B3A57):</strong>
+                Used for headings, navigation areas, and important sections.
+                It represents trust, knowledge, and professionalism.
+            </p>
+
+            <p>
+                <strong>Gold (#F4B400):</strong>
+                Used for buttons, highlights, and special areas.
+                It represents success, achievement, and hope.
+            </p>
+
+            <p>
+                <strong>White (#FFFFFF):</strong>
+                Used as the main background color to create a clean and readable design.
+            </p>
+
+        </section>
+
+
+        <section>
+            <h2>5. Typography</h2>
+
+            <p>
+                <strong>Poppins:</strong>
+                Used for headings, titles, and navigation because it gives a modern appearance.
+            </p>
+
+            <p>
+                <strong>Arial:</strong>
+                Used for paragraphs and normal text because it is simple and easy to read.
+            </p>
+
+        </section>
+
+
+        <section>
+            <h2>6. Wireframes</h2>
+
+            <h3>Mobile View</h3>
+
+            <div class="wireframe mobile">
+                <div>Logo</div>
+                <div>Menu</div>
+                <div>Hero Image</div>
+                <div>Welcome Message</div>
+                <div>About School</div>
+                <div>Programs</div>
+                <div>Student Activities</div>
+                <div>Contact</div>
+                <div>Footer</div>
+            </div>
+
+
+            <h3>Desktop View</h3>
+
+            <div class="wireframe desktop">
+                <div class="row">
+                    <div>Logo</div>
+                    <div>Navigation Menu</div>
+                </div>
+
+                <div>Hero Image and Welcome Message</div>
+
+                <div class="row">
+                    <div>About School</div>
+                    <div>Educational Programs</div>
+                </div>
+
+                <div class="row">
+                    <div>Student Activities</div>
+                    <div>Contact Information</div>
+                </div>
+
+                <div>Footer</div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+        <p>Wisdom Educational Academy Website Plan - WDD 131 Project</p>
+    </footer>
+
+</body>
+</html>
