@@ -1,1 +1,182 @@
+:root {
+  --primary-color: #003366;
+  --secondary-color: #f4f4f9;
+  --accent-color: #d9e2ec;
+  --text-color: #333333;
+  --card-bg: #e2e8f0;
+  --font-family: Arial, sans-serif;
+}
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+/* Navigation for Mobile */
+#menu {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+#menu::before {
+  content: "☰";
+}
+
+#menu.open::before {
+  content: "❌";
+}
+
+nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  z-index: 10;
+}
+
+nav.open {
+  display: block;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation li a {
+  display: block;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.navigation li a:hover,
+.navigation li a.active {
+  background-color: #002244;
+  color: #ffeb3b;
+}
+
+main {
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+main h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+/* Temple Cards Grid */
+.res-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.temple-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.temple-card h3 {
+  color: #1a202c;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.temple-card p {
+  font-size: 0.95rem;
+  margin: 0.25rem 0;
+}
+
+.temple-card p .label {
+  color: #4a5568;
+  font-weight: bold;
+}
+
+.temple-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-top: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+/* Desktop Navigation View */
+@media (min-width: 768px) {
+  #menu {
+    display: none;
+  }
+
+  nav {
+    display: block;
+    position: static;
+    width: auto;
+    background-color: transparent;
+  }
+
+  .navigation {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .navigation li a {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+}
