@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <meta name="description" content="Review submission confirmation page.">
+    <meta name="author" content="Debela Mendara Refisa">
+    <link rel="stylesheet" href="form.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Retrieve current counter from localStorage
+            let reviewCount = Number(window.localStorage.getItem("reviewCounter-ls")) || 0;
+            reviewCount++;
+            window.localStorage.setItem("reviewCounter-ls", reviewCount);
 
+            // Display count on page
+            const countDisplay = document.getElementById("review-count");
+            if (countDisplay) {
+                countDisplay.textContent = reviewCount;
+            }
+
+            // Footer dates
+            const yearSpan = document.getElementById("currentyear");
+            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+            const lastMod = document.getElementById("lastModified");
+            if (lastMod) lastMod.textContent = `Last Modification: ${document.lastModified}`;
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Thank You!</h1>
+    </header>
+
+    <main class="confirmation-container">
+        <h2>Your review has been successfully submitted.</h2>
+        <p>Total reviews submitted from this browser: <strong id="review-count">0</strong></p>
+        <p><a href="form.html" class="back-link">Submit Another Review</a></p>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Debela Mendara Refisa | Ethiopia</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
