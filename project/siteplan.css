@@ -1,162 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wisdom Educational Academy Site Plan</title>
-    <meta name="description" content="Website planning document for Wisdom Educational Academy website project.">
-    <link rel="stylesheet" href="siteplan.css">
+/* Color Palette Variables */
+:root {
+    --primary-color: #1B3A57;   /* Dark Blue */
+    --accent-color: #F4B400;    /* Gold */
+    --bg-color: #FFFFFF;        /* White */
+    --text-color: #333333;
+    --light-bg: #F4F6F8;
+}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
+/* Base & Typography Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
 
-<body>
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+}
 
-    <header>
-        <h1>Wisdom Educational Academy Website Plan</h1>
-    </header>
+/* Header & Footer */
+header {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 1.5rem;
+    text-align: center;
+}
 
-    <main>
+header h1 {
+    color: var(--bg-color);
+    margin: 0;
+}
 
-        <section>
-            <h2>1. Site Name</h2>
-            <h3>Wisdom Educational Academy</h3>
-            
-            <img src="https://via.placeholder.com/150x50?text=Logo" alt="Wisdom Educational Academy Logo Concept" class="logo-preview">
-            
-            <p>
-                The logo concept includes an open book, a graduation cap, and a light symbol.
-                These symbols represent knowledge, learning, growth, and a bright future.
-            </p>
+footer {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
 
-            <p>
-                I chose the name "Wisdom Educational Academy" because it represents a school
-                that focuses on knowledge, skills, and values. The name shows the goal of
-                helping students learn and prepare for their future.
-            </p>
-        </section>
+/* Layout */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
 
+section {
+    margin-bottom: 2rem;
+    border-bottom: 2rem solid transparent;
+}
 
-        <section>
-            <h2>2. Site Purpose</h2>
+h2 {
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.3rem;
+}
 
-            <p>
-                The purpose of this website is to provide information about Wisdom Educational
-                Academy. The website will introduce the school, its mission, educational
-                programs, student activities, and contact information. It will help parents,
-                students, and visitors learn more about the school and its services.
-            </p>
-        </section>
+/* Elements */
+ul {
+    padding-left: 1.2rem;
+}
 
+li {
+    margin-bottom: 0.5rem;
+}
 
-        <section>
-            <h2>3. Scenarios</h2>
+.logo-preview {
+    margin: 0.5rem 0 1rem 0;
+    border: 1px solid var(--primary-color);
+}
 
-            <ul>
-                <li>
-                    A parent wants to learn about the school's educational programs.
-                    Where can they find information about classes and services?
-                </li>
+/* Wireframe Visual Styles */
+.wireframe {
+    background-color: var(--light-bg);
+    border: 2px dashed var(--primary-color);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 
-                <li>
-                    A new visitor wants to contact the school.
-                    Where can they find the school's contact information and location details?
-                </li>
-            </ul>
-        </section>
+.wireframe div {
+    background-color: #E2E8F0;
+    border: 1px solid #CBD5E1;
+    padding: 0.75rem;
+    text-align: center;
+    font-weight: bold;
+}
 
+.wireframe .row {
+    display: flex;
+    gap: 0.5rem;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
 
-        <section>
-            <h2>4. Color Schema</h2>
-
-            <p>
-                <strong>Dark Blue (#1B3A57):</strong>
-                Used for headings, navigation areas, and important sections.
-                It represents trust, knowledge, and professionalism.
-            </p>
-
-            <p>
-                <strong>Gold (#F4B400):</strong>
-                Used for buttons, highlights, and special areas.
-                It represents success, achievement, and hope.
-            </p>
-
-            <p>
-                <strong>White (#FFFFFF):</strong>
-                Used as the main background color to create a clean and readable design.
-            </p>
-
-        </section>
-
-
-        <section>
-            <h2>5. Typography</h2>
-
-            <p>
-                <strong>Poppins:</strong>
-                Used for headings, titles, and navigation because it gives a modern appearance.
-            </p>
-
-            <p>
-                <strong>Arial:</strong>
-                Used for paragraphs and normal text because it is simple and easy to read.
-            </p>
-
-        </section>
-
-
-        <section>
-            <h2>6. Wireframes</h2>
-
-            <h3>Mobile View</h3>
-
-            <div class="wireframe mobile">
-                <div>Logo</div>
-                <div>Menu</div>
-                <div>Hero Image</div>
-                <div>Welcome Message</div>
-                <div>About School</div>
-                <div>Programs</div>
-                <div>Student Activities</div>
-                <div>Contact</div>
-                <div>Footer</div>
-            </div>
-
-
-            <h3>Desktop View</h3>
-
-            <div class="wireframe desktop">
-                <div class="row">
-                    <div>Logo</div>
-                    <div>Navigation Menu</div>
-                </div>
-
-                <div>Hero Image and Welcome Message</div>
-
-                <div class="row">
-                    <div>About School</div>
-                    <div>Educational Programs</div>
-                </div>
-
-                <div class="row">
-                    <div>Student Activities</div>
-                    <div>Contact Information</div>
-                </div>
-
-                <div>Footer</div>
-            </div>
-
-        </section>
-
-
-    </main>
-
-
-    <footer>
-        <p>Wisdom Educational Academy Website Plan - WDD 131 Project</p>
-    </footer>
-
-</body>
-</html>
+.wireframe .row div {
+    flex: 1;
+}
