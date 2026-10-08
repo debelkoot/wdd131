@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom Educational Academy - Programs</title>
+    <meta name="description" content="Discover the educational programs and curriculum offered at Wisdom Educational Academy, ranging from primary to secondary levels.">
+    <meta name="author" content="Debela Mendara Refisa">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/programs.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <span class="logo-icon" aria-hidden="true">📖🎓💡</span>
+                <span class="logo-text">Wisdom Educational Academy</span>
+            </div>
+            <button id="hamburger-btn" aria-label="Toggle Navigation Menu">☰</button>
+            <nav id="primary-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programs.html" class="active">Programs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <h1>Our Educational Programs</h1>
+            <p>Explore our academic offerings tailored to foster development at every stage of education.</p>
+        </section>
+
+        <!-- Dynamic Filter Controls -->
+        <section class="filter-controls">
+            <div class="filter-group">
+                <label for="category-filter">Filter by Category:</label>
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="Primary">Primary Education</option>
+                    <option value="Middle">Middle School</option>
+                    <option value="High School">High School</option>
+                </select>
+            </div>
+            <div class="saved-stats">
+                <p>Bookmarked Programs: <span id="saved-count">0</span></p>
+            </div>
+        </section>
+
+        <!-- Container for JavaScript Rendering -->
+        <section id="programs-container" class="card-grid">
+            <!-- Dynamic program items injected via JavaScript -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; <span id="current-year"></span> Wisdom Educational Academy. All rights reserved.</p>
+            <p>Debela Mendara Refisa | WDD 131 Final Project</p>
+            <p><a href="references.html">References & Citing Page</a></p>
+        </div>
+    </footer>
+</body>
+</html>
