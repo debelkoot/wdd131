@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom Educational Academy - Contact Us</title>
+    <meta name="description" content="Contact Wisdom Educational Academy for inquiries, campus tours, and enrollment information.">
+    <meta name="author" content="Debela Mendara Refisa">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/contact.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <span class="logo-icon" aria-hidden="true">📖🎓💡</span>
+                <span class="logo-text">Wisdom Educational Academy</span>
+            </div>
+            <button id="hamburger-btn" aria-label="Toggle Navigation Menu">☰</button>
+            <nav id="primary-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="grid-two-col">
+            <div class="card">
+                <h1>Get in Touch</h1>
+                <p>Have questions about admissions or school activities? Send us a message using the form, or reach out directly.</p>
+                
+                <div class="contact-details">
+                    <p><strong>📍 Address:</strong> Academy Way, Building 100, Adama, Ethiopia</p>
+                    <p><strong>📞 Phone:</strong> +251 (0) 22 123 4567</p>
+                    <p><strong>✉️ Email:</strong> info@wisdomacademy.edu</p>
+                    <p><strong>🕒 Office Hours:</strong> Monday – Friday: 8:00 AM – 4:00 PM</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Send an Inquiry</h2>
+                <form id="contact-form" action="#" method="get">
+                    <div class="form-group">
+                        <label for="fullName">Full Name <span class="required">*</span></label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="e.g., Jane Doe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="e.g., jane@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inquiryType">Inquiry Subject <span class="required">*</span></label>
+                        <select id="inquiryType" name="inquiryType" required>
+                            <option value="">-- Select Option --</option>
+                            <option value="admissions">Admissions & Enrollment</option>
+                            <option value="curriculum">Academic Curriculum</option>
+                            <option value="tours">Campus Visit Tour</option>
+                            <option value="other">General Question</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Write your inquiry here..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Submit Inquiry</button>
+                </form>
+
+                <div id="form-feedback" class="feedback-box hidden" aria-live="polite"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; <span id="current-year"></span> Wisdom Educational Academy. All rights reserved.</p>
+            <p>Debela Mendara Refisa | WDD 131 Final Project</p>
+            <p><a href="references.html">References & Citing Page</a></p>
+        </div>
+    </footer>
+</body>
+</html>
