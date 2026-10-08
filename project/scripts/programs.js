@@ -1,4 +1,3 @@
-// Array of Program Objects
 const programsData = [
     {
         id: "p1",
@@ -30,15 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector("#programs-container");
     const filterSelect = document.querySelector("#category-filter");
 
-    // Render Initial State
     renderPrograms(programsData, container);
     updateSavedCountUI();
 
-    // Event Listener for Filtering using Array Methods
     filterSelect.addEventListener("change", (e) => {
         const selectedCategory = e.target.value;
-        
-        // Conditional Branching + Array filter method
         if (selectedCategory === "all") {
             renderPrograms(programsData, container);
         } else {
@@ -48,12 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Function 2: Build HTML Output using EXCLUSIVE Template Literals & Dynamic DOM
 function renderPrograms(items, targetElement) {
     if (!targetElement) return;
 
     if (items.length === 0) {
-        targetElement.innerHTML = `<p class="card">No educational programs available for this selection.</p>`;
+        targetElement.innerHTML = `<p class="info-card">No educational programs available for this selection.</p>`;
         return;
     }
 
@@ -63,13 +57,13 @@ function renderPrograms(items, targetElement) {
         const isBookmarked = savedBookmarks.includes(item.id);
         
         return `
-            <article class="card">
+            <article class="info-card">
                 <img src="${item.image}" alt="${item.title}" width="400" height="250" loading="lazy">
                 <h3>${item.title}</h3>
                 <p><strong>Level:</strong> ${item.category} (${item.ageRange})</p>
                 <p>${item.description}</p>
                 <button 
-                    class="btn-primary bookmark-btn" 
+                    class="action-button bookmark-btn" 
                     data-id="${item.id}">
                     ${isBookmarked ? "★ Bookmarked" : "☆ Save Program"}
                 </button>
@@ -79,18 +73,15 @@ function renderPrograms(items, targetElement) {
 
     targetElement.innerHTML = htmlContent;
 
-    // Attach click events for dynamic localStorage manipulation
     const buttons = targetElement.querySelectorAll(".bookmark-btn");
     buttons.forEach(btn => {
         btn.addEventListener("click", (e) => toggleBookmark(e.target.dataset.id));
     });
 }
 
-// Function 3: LocalStorage Manipulation
 function toggleBookmark(programId) {
     let bookmarks = getBookmarksFromStorage();
 
-    // Conditional logic to toggle presence in array
     if (bookmarks.includes(programId)) {
         bookmarks = bookmarks.filter(id => id !== programId);
     } else {
@@ -99,7 +90,6 @@ function toggleBookmark(programId) {
 
     localStorage.setItem("wisdom_bookmarks", JSON.stringify(bookmarks));
     
-    // Re-render to reflect bookmark state dynamically
     const filterSelect = document.querySelector("#category-filter");
     const currentCategory = filterSelect ? filterSelect.value : "all";
     const container = document.querySelector("#programs-container");
