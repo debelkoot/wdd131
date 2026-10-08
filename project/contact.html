@@ -15,7 +15,7 @@
 </head>
 <body>
     <header>
-        <div class="header-container">
+        <div class="header-box">
             <div class="logo-area">
                 <span class="logo-icon" aria-hidden="true">📖🎓💡</span>
                 <span class="logo-text">Wisdom Educational Academy</span>
@@ -31,9 +31,9 @@
         </div>
     </header>
 
-    <main class="container">
-        <section class="grid-two-col">
-            <div class="card">
+    <main class="site-wrapper">
+        <section class="grid-layout">
+            <div class="info-card">
                 <h1>Get in Touch</h1>
                 <p>Have questions about admissions or school activities? Send us a message using the form, or reach out directly.</p>
                 
@@ -45,20 +45,20 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="info-card">
                 <h2>Send an Inquiry</h2>
                 <form id="contact-form" action="#" method="get">
-                    <div class="form-group">
+                    <div class="input-block">
                         <label for="fullName">Full Name <span class="required">*</span></label>
                         <input type="text" id="fullName" name="fullName" required placeholder="e.g., Jane Doe">
                     </div>
 
-                    <div class="form-group">
+                    <div class="input-block">
                         <label for="email">Email Address <span class="required">*</span></label>
                         <input type="email" id="email" name="email" required placeholder="e.g., jane@example.com">
                     </div>
 
-                    <div class="form-group">
+                    <div class="input-block">
                         <label for="inquiryType">Inquiry Subject <span class="required">*</span></label>
                         <select id="inquiryType" name="inquiryType" required>
                             <option value="">-- Select Option --</option>
@@ -69,12 +69,12 @@
                         </select>
                     </div>
 
-                    <div class="form-group">
+                    <div class="input-block">
                         <label for="message">Your Message <span class="required">*</span></label>
                         <textarea id="message" name="message" rows="5" required placeholder="Write your inquiry here..."></textarea>
                     </div>
 
-                    <button type="submit" class="btn-primary">Submit Inquiry</button>
+                    <button type="submit" class="action-button">Submit Inquiry</button>
                 </form>
 
                 <div id="form-feedback" class="feedback-box hidden" aria-live="polite"></div>
@@ -83,7 +83,7 @@
     </main>
 
     <footer>
-        <div class="footer-container">
+        <div class="footer-box">
             <p>&copy; <span id="current-year"></span> Wisdom Educational Academy. All rights reserved.</p>
             <p>Debela Mendara Refisa | WDD 131 Final Project</p>
             <p><a href="references.html">References & Citing Page</a></p>
